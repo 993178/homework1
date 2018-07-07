@@ -16,14 +16,12 @@ let weaponLike = {
 }
 
 function rest(hero) {
-    console.log("zzz");
     hero.health = 10;
     return hero
 }
 
 function pickUpItem(hero,weaponLike) {
     hero.inventory.push(weaponLike);
-    console.log("picks it up");
 }
 
 function equipWeapon(hero) {
@@ -33,3 +31,4 @@ function equipWeapon(hero) {
 }
 
 console.log(hero.inventory[0]);
+//Tegen mezelf: "Laten we dat ook eens updaten... Er gebeurt waarschijnlijk niks..." *ververst pagina* *opeens 18/18* "Ui-uu?!!"
