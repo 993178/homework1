@@ -29,6 +29,10 @@ function equipWeapon(hero) {
     hero.weapon = hero.inventory[0];
     }
 }
-
-console.log(hero.inventory[0]);
 //Tegen mezelf: "Laten we dat ook eens updaten... Er gebeurt waarschijnlijk niks..." *ververst pagina* *opeens 18/18* "Ui-uu?!!"
+function newNameHero(hero) {
+    var inputField = document.getElementById("new-name");
+    console.log(inputField.value)
+    hero.name= inputField.value
+}
+//lukt niet meer, volgens mij refresht ie de page terwijl ie toch op false gezet is?? Gek.
