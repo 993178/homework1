@@ -1,5 +1,5 @@
-// Write your JS here  Meh, I'll take the next line
-const hero = {
+// Write your JS here
+let hero = {
     name: "DI Goodman",
     heroic: true,
     inventory: [],
@@ -7,19 +7,31 @@ const hero = {
     weapon: {
         type: "cause confusion",
         damage: 2
-    }    
+    }
 }
 
-function rest(newHealth) {
-    hero.health = newHealth
+let weaponLike = {
+    type: "dagger",
+    damage: 2
+}
+
+function rest(hero) {
+    hero.health = 10;
     return hero
-    console.log(hero.health);
-}
-function pickUpItem(item) {
-    hero.inventory.push(item)
-}
-function equipWeapon() {
-
 }
 
-document.getElementById("inn").onclick = rest(11)
+function pickUpItem(hero,weaponLike) {
+    hero.inventory.push(weaponLike);
+}
+
+function equipWeapon(weaponLike) {
+    hero.inventory.unshift(hero.weapon);
+}
+
+
+document.getElementById("inn").onclick = rest(hero);
+document.getElementById("dagger").onclick = pickUpItem(hero,weaponLike);
+document.getElementById("bag").onclick = equipWeapon(hero);
+//vroeg Arno gister hoe dit nou te doen want vatte het nog steeds 
+//niet. Kreeg lang chaotisch antwoord. Never again.
+console.log(hero.inventory)
