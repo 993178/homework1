@@ -16,22 +16,20 @@ let weaponLike = {
 }
 
 function rest(hero) {
+    console.log("zzz");
     hero.health = 10;
     return hero
 }
 
 function pickUpItem(hero,weaponLike) {
     hero.inventory.push(weaponLike);
+    console.log("picks it up");
 }
 
-function equipWeapon(weaponLike) {
-    hero.inventory.unshift(hero.weapon);
+function equipWeapon(hero) {
+    if (hero.inventory[0] !== undefined) {
+    hero.weapon = hero.inventory[0];
+    }
 }
 
-
-document.getElementById("inn").onclick = rest(hero);
-document.getElementById("dagger").onclick = pickUpItem(hero,weaponLike);
-document.getElementById("bag").onclick = equipWeapon(hero);
-//vroeg Arno gister hoe dit nou te doen want vatte het nog steeds 
-//niet. Kreeg lang chaotisch antwoord. Never again.
-console.log(hero.inventory)
+console.log(hero.inventory[0]);
